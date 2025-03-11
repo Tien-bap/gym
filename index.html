@@ -9,40 +9,85 @@
         <title>Gym Chúa</title>
     </head>
     <body>
-        <div id="main">
-            <div class="header">
-                <div class="nav">
-                    <div class="dropdown">
-                        <a class="menu" href="#"><i class="fas fa-bars"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#">Giới thiệu</a>
-                            <a href="#">Sản phẩm</a>
-                            <a href="#">Liên hệ</a>
-                        </div>
-                    </div>
+        <div id="header">
+            <div class="container">
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="./img/logo.png" alt="logo" style="width: 100px; height: auto;">
+                    </a>
                     
-                    <a href="#" class="user"><i class="fas fa-user"></i></a>
-                    <a href="#" class="shop"><i class="fas fa-shopping-cart"></i></a>
                 </div>
-            </div>
 
-            <div class="slider">
-                <div class="slider-content">
-                    <img src="./img/logo.png" alt="logo" class="logo">
+                <div id="menu">
+                    <a href="gioithieu.html">Giới Thiệu</a>
+                    <a href="dichvu.html">Sản Phẩm</a>
+                    <a href="lienhe.html">Liên hệ</a>
+                    <button onclick="show_login()" ><i class="fas fa-user" ></i></button>
                 </div>
-            </div>
-
-            <div class="content">
-                <h2 class="section-content">Gym Chúa</h2>
-                <p class="about-text">
-                    Gym Chúa là một hệ thống phòng tập gym chuyên nghiệp, với đội ngũ huấn luyện viên giàu kinh nghiệm, chúng tôi cam kết mang đến cho bạn một cơ thể khỏe mạnh, săn chắc và đẹp.
-                </p>
             </div>
         </div>
-        
 
-        
+        <div id="main">
+            <div class="container">
+                <div id="content">
+                    <h1 >Gym Chúa Fitness</h1>
+                    <div id="slogan">No Pain No Gain</div>
+                    <p style="font-size: 16px;">Trung tâm thể hình năng động, được trang bị nhiều trang thiết bị tiên tiến cùng với không khí sôi động và huấn luyện viên chuyên nghiệp</p>
+                </div>
+                <div id="login" class="hidden">
+                    <form action="login.php" method="post">
+                        <div class="login">
+                            <h1>Đăng Nhập</h1>
+                            
+                            <div class="name">
+                                <label for="username">Tên đăng nhập:</label>
+                                <input type="text" name="username" >
+                            </div>
 
- 
+                            <div class="password">
+                                <label for="password">Mật khẩu:</label>
+                                <input type="password" name="password" id="id_password">
+                                <i class="far fa-eye" id="togglePassword" onclick="eye()" style="margin-left: 10px; cursor: pointer; color:black;"></i>
+                            </div>
+
+                            <button onclick="hidden_login()" >Đăng nhập</button>
+                            <p>bạn chưa có tài khoản?</p>
+                            <a href="#" onclick="show_sign_up()">Đăng ký</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="sign_up" class="hidden" >
+                    <form action="sign_up.html" method="post">
+                        <div class="sign_up">
+                            <h1>Đăng Ký</h1>
+
+                            <div class="email">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email">
+                            </div>
+                            <div class="name">
+                                <label for="username">Tên đăng ký:</label>
+                                <input type="text" name="username" >
+                            </div>
+
+                            <div class="password">
+                                <label for="password">Mật khẩu:</label>
+                                <input type="password" name="password" id="id_password_signup">
+                                <i class="far fa-eye" id="togglePassword_signup" onclick="eye_signup()" style="margin-left: 10px; cursor: pointer; color:black;"></i>
+                            </div>
+
+                            <button onclick="hidden_login()" >Đăng Ký</button>
+                        </div>
+                        
+
+
+                    </form>
+
+                </div>
+            </div>
+            
+        </div>
+        <script src="main.js" ></script>
     </body>
 </html>
